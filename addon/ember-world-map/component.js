@@ -2,16 +2,11 @@ import Component from '@ember/component';
 import {computed} from '@ember/object';
 import {isBlank} from '@ember/utils';
 import layout from './template';
+import $ from 'jquery';
 
 export default Component.extend({
   layout,
   tagName:'',
-
-  colorsMap: {
-    "BLUE": ['#C8EEFF', '#0071A4'],
-    "RED": ['#ffcbd7', '#d40000'],
-    "GREEN": ['#e6ffe6', '#00c600']
-  },
 
   _data: computed('data', function(){
     let data = this.get('data');
@@ -23,7 +18,11 @@ export default Component.extend({
 
   _colorScale: computed('color', function(){
     let color = this.get('color');
-    let colorsMap = this.get('colorsMap');
+    let colorsMap = {
+      "BLUE": ['#C8EEFF', '#0071A4'],
+        "RED": ['#ffcbd7', '#d40000'],
+        "GREEN": ['#e6ffe6', '#00c600']
+    };
     if(colorsMap[color]){
       return colorsMap[color];
     }
