@@ -10,9 +10,7 @@ module.exports = {
     return false;
   },
 
-
   included: function(app) {
-    // workaround for https://github.com/ember-cli/ember-cli/issues/3718
     this._super.included.apply(this, arguments);
 
     //jvectormap
@@ -22,6 +20,5 @@ module.exports = {
     app.import('vendor/css/ember-world-map.css');
 
   },
-
 
 };
