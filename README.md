@@ -2,6 +2,7 @@ ember-world-map
 ==============================================================================
 
 [![npm version](https://badge.fury.io/js/ember-world-map.svg)](https://badge.fury.io/js/ember-world-map.svg)
+[![downloads](https://img.shields.io/npm/dm/ember-world-map.svg?style=flat-square)](https://img.shields.io/npm/dm/ember-world-map.svg?style=flat-square)
 [![Build Status](https://travis-ci.org/ahmetemrekilinc/ember-world-map.svg?branch=master)](https://travis-ci.org/ahmetemrekilinc/ember-world-map.svg?branch=master)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-world-map.svg)](https://emberobserver.com/badges/ember-world-map.svg)
 [![Dependency Status](https://david-dm.org/ahmetemrekilinc/ember-world-map.svg)](https://david-dm.org/ahmetemrekilinc/ember-world-map.svg)

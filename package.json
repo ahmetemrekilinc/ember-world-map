@@ -1,6 +1,6 @@
 {
   "name": "ember-world-map",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Ember world map addon that uses jvectormap",
   "keywords": [
     "ember-addon",
