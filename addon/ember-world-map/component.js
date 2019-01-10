@@ -3,6 +3,7 @@ import {computed} from '@ember/object';
 import {isBlank} from '@ember/utils';
 import layout from './template';
 import $ from 'jquery';
+import {observer} from '@ember/object';
 
 export default Component.extend({
   layout,
@@ -20,8 +21,8 @@ export default Component.extend({
     let color = this.get('color');
     let colorsMap = {
       "BLUE": ['#C8EEFF', '#0071A4'],
-        "RED": ['#ffcbd7', '#d40000'],
-        "GREEN": ['#e6ffe6', '#00c600']
+      "RED": ['#ffcbd7', '#d40000'],
+      "GREEN": ['#e6ffe6', '#00c600']
     };
     if(colorsMap[color]){
       return colorsMap[color];
@@ -29,12 +30,13 @@ export default Component.extend({
     return ['#C8EEFF', '#0071A4'];
   }),
 
-  init(){
-    this._super(...arguments);
+  populateMap(){
     let data = this.get('_data');
     let _colorScale = this.get('_colorScale');
     $(function(){
-      $('.ember-world-map').vectorMap({
+      let mapObj = $('.ember-world-map');
+      mapObj.html("");
+      mapObj.vectorMap({
         map: 'world_mill',
         series: {
           regions: [{
@@ -50,6 +52,16 @@ export default Component.extend({
         }
       });
     });
-  }
+  },
+
+  init(){
+    this._super(...arguments);
+    this.populateMap();
+  },
+
+  propsObserver: observer('data', 'color', function(){
+    this.populateMap();
+  })
+
 
 });
