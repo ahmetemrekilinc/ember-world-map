@@ -31,6 +31,8 @@ You can pass your data as an object named as `data` parameter and custom color a
 }}
 ```
 
+Checkout live examples at [ember-world-map demo page](https://ahmetemrekilinc.github.io/ember-world-map-demo/)
+
 License
 ------------------------------------------------------------------------------
 
