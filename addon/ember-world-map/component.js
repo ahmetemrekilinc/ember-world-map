@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import {computed} from '@ember/object';
 import {isBlank} from '@ember/utils';
 import layout from './template';
-import $ from 'jquery';
+import jQuery from 'jquery';
 import {observer} from '@ember/object';
 
 export default Component.extend({
@@ -33,8 +33,8 @@ export default Component.extend({
   populateMap(){
     let data = this.get('_data');
     let _colorScale = this.get('_colorScale');
-    $(function(){
-      let mapObj = $('.ember-world-map');
+    jQuery(() => {
+      let mapObj = jQuery('.ember-world-map');
       mapObj.html("");
       mapObj.vectorMap({
         map: 'world_mill',
